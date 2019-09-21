@@ -15,7 +15,7 @@ while True:
     if not len(buf):
         break
     print ("Received %s bytes from %s %s: " % (len(buf), address, buf ))
-    data = "ACK:"+str(buf)
+    data = "Echo: " + str(buf)
     print (data)
     s.sendto(data.encode('utf-8'), address)
     
